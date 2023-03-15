@@ -52,17 +52,18 @@ else {
 
 
 
-/*$('.top__slider').slick({
+$('.reviews__slider').slick({
   infinite: true,    
-  speed: 6000,
+  speed: 600,
   slidesToScroll: 1,
   autoplay: false,    
-  slidesToShow: 1,
+  slidesToShow: 2,
   cssEase: 'linear',  
   autoplaySpeed: 0,  
   arrows: true,
-  pauseOnHover: true,  
-});*/
+  pauseOnHover: true,
+  centermode: true,
+});
 
 
 
@@ -124,12 +125,6 @@ popup('.link2', '.modal-overlay_2', '.modal-close_2');
 popup('.link', '.modal-overlay_1', '.modal-close_1');
 
 
-$('a[href*=\\#]:not([href=\\#])').click(function () {
-  elementClick = $(this).attr("href");
-  destination = $(elementClick).offset().top;
-  $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 85}, 1100);
-  return false;
-});
 
 
 $(window).scroll(function(){
@@ -148,6 +143,13 @@ if($('select').length) {
     minimumResultsForSearch: -1
   });
 }
+
+$('a[href*=\\#]:not([href=\\#])').click(function () {
+  elementClick = $(this).attr("href");
+  destination = $(elementClick).offset().top;
+  $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination - 85}, 1100);
+  return false;
+});
 
 }); //ready
 
