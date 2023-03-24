@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">  
+  <meta charset="UTF-8">
   <!--meta name="viewport" content="width=1200px"-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Главная</title>  
-  @@include('var/_styless.html')
+  <title>Главная</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Oranienbaum&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/main.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -14,14 +22,17 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <body>
 
   <div class="wrapper">
     <header class="header">
       <div class="contain">
         <div class="header__row">
-          <a href="index.html" class="header__logo"><img src="img/logo.png" /></a>
-          <div class="header__cities">Челябинск<span class="header__btn-span"></span></div>
+          <div class="header__col-1">          
+            <a href="index.html" class="header__logo"><img src="img/logo.png" /></a>
+            <div class="header__cities">Челябинск</div>
+          </div>
           <div class="header__cont-w">
             <div class="header__cont-row">
               <div class="header__cont">
@@ -37,602 +48,866 @@
                 <a href="tel:220-72-77" class="header__phone">220-72-77</a>
               </div>
             </div>
-            <a href="" class="whatsapp__btn">
-              <span class="whatsapp__icon"><img src="img/whatsapp.svg" /></span><span class="whatsapp__write">Написать в <strong class="whatsapp__write-link">Whatsapp</strong></span>
-            </a>
+            <a href="" class="whatsapp">
+              <span class="whatsapp__icon"><img src="img/whatsapp.svg" /></span><span class="whatsapp__write">Написать в
+                <strong class="whatsapp__write-link">Whatsapp</strong></span>
+              </a>
+            </div>
+            <span class="burger"></span>
           </div>
-          <span class="burger"></span>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main class="main">
-      <section class="banner">
-        <div class="contain">
-          <div class="banner__row">
-            <div class="banner__right">
-              <div class="banner__title">
-                Сервис по уходу за обувью <br />
-                и кожаными изделиями
-              </div>
-              <ul class="banner__ul">
-                <li class="banner__li">Индивидуальный подход к каждому клиенту</li>
-                <li class="banner__li">Только ручная работа</li>
-                <li class="banner__li">Доставка готового изделия по вашему адресу</li>
-                <li class="banner__li">Исполнение заказа точно в срок</li>
-              </ul>
-              <a href="" class="banner__btn">Заказать услугу</a>
-              <div class="banner__download">
-                <div class="banner__content">
-                  <div class="banner__info">
-                    Вы всегда можете отслеживать свой заказ<br />
-                    <a href="" class="banner__link">наше приложение</a> на свой смартфон
-                  </div>
-                  <div class="apps">
-                    <a href="" class="apps__item">
-                      <span class="apps__img-w"><img src="img/download-app-1.svg" /></span>
-                      <span class="apps__col">
-                        <span class="apps__download">Скачать</span>
-                        <span class="apps__browser">Apple Store</span>
+      <main class="main">
+        <section class="banner">
+          <div class="contain">
+            <div class="banner__row">
+              <div class="banner__right">
+                <div class="banner__title">
+                  Сервис по уходу за обувью <br />
+                  и кожаными изделиями
+                </div>
+                <ul class="banner__ul">
+                  <li class="banner__li">Индивидуальный подход к каждому клиенту</li>
+                  <li class="banner__li">Только ручная работа</li>
+                  <li class="banner__li">Доставка готового изделия по вашему адресу</li>
+                  <li class="banner__li">Исполнение заказа точно в срок</li>
+                </ul>
+                <a href="" class="banner__btn btn">Заказать услугу</a>
+                <div class="banner__download">
+                  <div class="banner__content">
+                    <div class="banner__info">
+                      Вы всегда можете отслеживать свой заказ<br />
+                      <a href="" class="banner__link">наше приложение</a> на свой смартфон
+                    </div>
+                    <div class="apps">
+                      <a href="" class="apps__item">
+                        <span class="apps__img-w"><img src="img/download-app-1.svg" /></span>
+                        <span class="apps__col">
+                          <span class="apps__download">Скачать</span>
+                          <span class="apps__browser">Apple Store</span>
+                        </span>
+                      </a>
+                      <a href="" class="apps__item">
+                        <span class="apps__img-w"><img src="img/download-app-2.svg" /></span>
+                        <span class="apps__col"><span class="apps__download">Скачать</span>
+                        <span class="apps__browser">Google Play</span>
                       </span>
                     </a>
-                    <a href="" class="apps__item">
-                      <span class="apps__img-w"><img src="img/download-app-2.svg" /></span>
-                      <span class="apps__col"><span class="apps__download">Скачать</span>
-                      <span class="apps__browser">Google Play</span>
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="banner__download-img">
-                <img src="img/mobile.png" alt="">
-              </div>
-            </div>
-          </div>            
-        </div>            
-      </div>
-    </section> 
-
-    <section class="services">
-      <div class="contain">
-        <div class="h__2">Наши услуги</div>
-        <div class="services__row">
-          <a href="" class="service">            
-            <div class="service__title">
-              Установка <br />
-              профилактики<br />
-              на подошву
-            </div>
-            <span class="service__btn">Перейти</span>
-            <img src="img/services-1.png" class="service__img" />
-          </a>
-
-          <a href="" class="service">
-            <div class="service__title">
-              Установка <br />
-              набоек
-            </div>
-            <span class="service__btn">Перейти</span>
-            <img src="img/services-2.png" class="service__img" />
-          </a>
-          <a href="" class="service">
-            <div class="service__title">Замена молний</div>
-            <span class="service__btn">Перейти</span>
-            <img src="img/services-3.png" class="service__img" />
-          </a>
-          <a href="" class="service">
-            <div class="service__title">
-              Изготовление <br />
-              и замена <br />
-              ручек на сумке
-            </div>
-            <span class="service__btn">Перейти</span>
-            <img src="img/services-4.png" class="service__img" />
-          </a>
-          <a href="" class="service">
-            <div class="service__title">
-              Восстановление <br />
-              внешнего вида<br />
-              обуви
-            </div>
-            <span class="service__btn">Перейти</span>
-            <img src="img/services-5.png" class="service__img" />
-          </a>
-          <a href="" class="service">
-            <div class="service__title">
-              Химчистка <br />
-              кроссовок
-            </div>
-            <span class="service__btn">Перейти</span>
-            <img src="img/services-6.png" class="service__img" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="price">
-      <div class="contain">
-        <div class="h__2">Прайс-лист</div>
-        <div class="tabs price__tabs">
-          <ul class="tabs__list price__ul">
-            <li class="tabs__list-item price__li active">Ремонт обуви</li>
-            <li class="tabs__list-item price__li">Ремонт сумок</li>  
-            <li class="tabs__list-item price__li">Химчистка</li>  
-            <li class="tabs__list-item price__li">Покраска</li>  
-          </ul>
-          <ul class="tabs__content-list">
-            <li class="tabs__content-list-item active">
-              <div class="price__content">
-                <div class="price__row">
-                  <div class="price__col">
-                    <table class="price__table">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Набойки женские</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 1100 руб.</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Набойки мужские</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 1550 руб.</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Профилактика</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 1100 руб.</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Замена каблуков</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 2800 руб.</div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>                    
-                  </div>
-                  <div class="price__col">
-                    <table class="price__table">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Замена молнии</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 1100 руб.</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Растяжка обуви</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 1550 руб.</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Химчистка обуви</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 1100 руб.</div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="dots"><span class="price__position">Покраска обуви</span></div>
-                          </td>
-                          <td>
-                            <div class="price__price">от 2800 руб.</div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>                    
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="tabs__content-list-item">
-             <div class="price__content">
-              <div class="price__row">
-               <div class="price__col">
-                <table class="price__table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Замена молнии</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Растяжка обуви</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1550 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Химчистка обуви</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Покраска обуви</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 2800 руб.</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="price__col">
-                <table class="price__table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Набойки женские</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Набойки мужские</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1550 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Профилактика</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Замена каблуков</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 2800 руб.</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>                    
+                <div class="banner__download-img">
+                  <img src="img/mobile.png" alt="">
+                </div>
               </div>
             </div>
-          </div>
-        </li>  
-        <li class="tabs__content-list-item">
-          <div class="price__content">
-            <div class="price__row">
-              <div class="price__col">
-                <table class="price__table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Набойки женские</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Набойки мужские</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1550 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Профилактика</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Замена каблуков</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 2800 руб.</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>                    
-              </div>
-              <div class="price__col">
-                <table class="price__table">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Замена молнии</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Растяжка обуви</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1550 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Химчистка обуви</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 1100 руб.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="dots"><span class="price__position">Покраска обуви</span></div>
-                      </td>
-                      <td>
-                        <div class="price__price">от 2800 руб.</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>                    
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="tabs__content-list-item">
-         <div class="price__content">
-          <div class="price__row">
-           <div class="price__col">
-            <table class="price__table">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Замена молнии</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 1100 руб.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Растяжка обуви</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 1550 руб.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Химчистка обуви</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 1100 руб.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Покраска обуви</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 2800 руб.</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="price__col">
-            <table class="price__table">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Набойки женские</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 1100 руб.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Набойки мужские</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 1550 руб.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Профилактика</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 1100 руб.</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="dots"><span class="price__position">Замена каблуков</span></div>
-                  </td>
-                  <td>
-                    <div class="price__price">от 2800 руб.</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
-      </div>
-    </li>
-  </ul>
-</div>
-</div>
-</section>
-<section class="brands">
-  <div class="contain">
-    <div class="h__2">Мы работаем с брендами</div>
-    <p class="brands__info">
-      Мы чистим, реставрируем и полностью восстанавливаем изделия<br />
-      от малоизвестных брендов, до брендов премиального класса
-    </p>
-    <div class="brands__row">
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-1.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-2.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-3.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-4.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-5.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-6.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-7.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-13.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-14.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-10.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-11.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-12.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-13.svg" class="brand" /></div>
-      </div>
-      <div class="brands__col">
-        <div class="brand"><img src="img/brand-14.svg" class="brand" /></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="courier">
-  <div class="contain">
-    <div class="courier__h">Закажите курьера</div>
-    <p class="courier__text">Заполните форму и наш курьер приедет к Вам в самое ближайшее время</p>
-    <form class="courier__form">
-      <input class="courier__input-text" type="text" placeholder="Ваше имя" />
-      <input class="courier__input-text" type="text" placeholder="Номер телефона" />
-      <div class="courier__btn-w">
-        <button class="courier__btn">Отправить заявку</button>
-        <div class="courier__explanation">
-          Наш оператор свяжется с Вами <br />
-          в течении 15 минут
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
-<section class="reviews">
-  <div class="contain">
-    <div class="h__2">Отзывы клиентов</div>
-    <div class="reviews__row reviews__slider">
-      <div class="reviews__col">
-        <div class="review">
-          <div class="review__info">
-            <div class="review__person">
-              <div class="review__ava"><img src="img/review-1.png" /></div>
-              <div class="review__cont">
-                <div class="review__name">Константин</div>
-                <div class="review__town">г. Челябинск</div>
+      </section>
+
+      <section class="services">
+        <div class="contain">
+          <div class="services__h2 h2">Наши услуги</div>
+          <div class="services__row">
+            <a href="" class="service">
+              <div class="service__title">
+                Установка <br />
+                профилактики<br />
+                на подошву
               </div>
-            </div>
-            <div class="review__stars"><img src="img/stars.svg" /></div>
+              <span class="service__btn">Перейти</span>
+              <img src="img/services-1.png" class="service__img" />
+            </a>
+
+            <a href="" class="service">
+              <div class="service__title">
+                Установка <br />
+                набоек
+              </div>
+              <span class="service__btn">Перейти</span>
+              <img src="img/services-2.png" class="service__img" />
+            </a>
+            <a href="" class="service">
+              <div class="service__title">Замена молний</div>
+              <span class="service__btn">Перейти</span>
+              <img src="img/services-3.png" class="service__img" />
+            </a>
+            <a href="" class="service">
+              <div class="service__title">
+                Изготовление <br />
+                и замена <br />
+                ручек на сумке
+              </div>
+              <span class="service__btn">Перейти</span>
+              <img src="img/services-4.png" class="service__img" />
+            </a>
+            <a href="" class="service">
+              <div class="service__title">
+                Восстановление <br />
+                внешнего вида<br />
+                обуви
+              </div>
+              <span class="service__btn">Перейти</span>
+              <img src="img/services-5.png" class="service__img" />
+            </a>
+            <a href="" class="service">
+              <div class="service__title">
+                Химчистка <br />
+                кроссовок
+              </div>
+              <span class="service__btn">Перейти</span>
+              <img src="img/services-6.png" class="service__img" />
+            </a>
           </div>
-          <p class="review__comment">
-            Таким образом консультация с широким активом представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что консультация с
-            широким активом играет важную роль в формировании позиций
+        </div>
+      </section>
+
+      <section class="price">
+        <div class="contain">
+          <div class="price__h2 h2">Прайс-лист</div>
+          <div class="tabs price__tabs">
+            <ul class="tabs__list price__ul">
+              <li class="tabs__list-item price__li active">Ремонт обуви</li>
+              <li class="tabs__list-item price__li">Ремонт сумок</li>
+              <li class="tabs__list-item price__li">Химчистка</li>
+              <li class="tabs__list-item price__li">Покраска</li>
+            </ul>
+            <ul class="tabs__content-list">
+              <li class="tabs__content-list-item active">
+                <div class="price__content">
+                  <div class="price__row">
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки женские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки мужские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Профилактика</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена каблуков</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена молнии</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Растяжка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Химчистка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Покраска обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tabs__content-list-item">
+                <div class="price__content">
+                  <div class="price__row">
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена молнии</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Растяжка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Химчистка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Покраска обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки женские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки мужские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Профилактика</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена каблуков</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tabs__content-list-item">
+                <div class="price__content">
+                  <div class="price__row">
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки женские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки мужские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Профилактика</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена каблуков</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена молнии</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Растяжка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Химчистка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Покраска обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="tabs__content-list-item">
+                <div class="price__content">
+                  <div class="price__row">
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена молнии</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Растяжка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Химчистка обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Покраска обуви</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="price__col">
+                      <table class="price__table">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки женские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Набойки мужские</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1550 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Профилактика</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 1100 руб.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="dots"><span class="price__position">Замена каблуков</span></div>
+                            </td>
+                            <td>
+                              <div class="price__price">от 2800 руб.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="brands">
+        <div class="contain">
+          <div class="brands__h2 h2">Мы работаем с брендами</div>
+          <p class="brands__info">
+            Мы чистим, реставрируем и полностью восстанавливаем изделия<br />
+            от малоизвестных брендов, до брендов премиального класса
           </p>
+          <div class="brands__row">
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-1.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-2.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-3.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-4.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-5.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-6.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-7.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-13.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-14.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-10.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-11.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-12.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-13.svg" class="brand__img" /></div>
+            </div>
+            <div class="brands__col">
+              <div class="brand"><img src="img/brand-14.svg" class="brand__img" /></div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="reviews__col">      
-        <div class="review">
-          <div class="review__info">
-            <div class="review__person">
-              <div class="review__ava"><img src="img/review-2.png" /></div>
-              <div class="review__cont">
-                <div class="review__name">Елена</div>
-                <div class="review__town">г. Челябинск</div>
+      </section>
+      <section class="courier">
+        <div class="contain">
+          <div class="h2 _white courier__h">Закажите курьера</div>
+          <p class="courier__text">Заполните форму и наш курьер приедет к Вам в самое ближайшее время</p>
+          <form class="courier__form">
+            <input class="courier__input-text" type="text" placeholder="Ваше имя" />
+            <input class="courier__input-text" type="text" placeholder="Номер телефона" />
+            <div class="courier__btn-w">
+              <button class="courier__btn btn">Отправить заявку</button>
+              <div class="courier__explanation">
+                Наш оператор свяжется с Вами <br />
+                в течении 15 минут
               </div>
             </div>
-            <div class="review__stars"><img src="img/stars.svg" /></div>
-          </div>
-          <p class="review__comment">
-            Таким образом консультация с широким активом представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что консультация с
-            широким активом играет важную роль в формировании позиций
-          </p>
+          </form>
         </div>
-      </div>
-          <div class="reviews__col">      
-        <div class="review">
-          <div class="review__info">
-            <div class="review__person">
-              <div class="review__ava"><img src="img/review-2.png" /></div>
-              <div class="review__cont">
-                <div class="review__name">Елена</div>
-                <div class="review__town">г. Челябинск</div>
+      </section>
+      <section class="reviews">
+        <div class="contain">
+          <div class="h2">Отзывы клиентов</div>
+        </div>
+        <div class="reviews__wrap">
+          <div class="reviews__row reviews__slider">
+            <div class="reviews__col">
+              <div class="review">
+                <div class="review__info">
+                  <div class="review__person">
+                    <div class="review__ava"><img src="img/review-1.png" /></div>
+                    <div class="review__cont">
+                      <div class="review__name">Константин</div>
+                      <div class="review__town">г. Челябинск</div>
+                    </div>
+                  </div>
+                  <div class="review__stars"><img src="img/stars.svg" /></div>
+                </div>
+                <p class="review__comment">
+                  Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+                  системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько
+                  очевидна, что консультация с
+                  широким активом играет важную роль в формировании позиций
+                </p>
               </div>
             </div>
-            <div class="review__stars"><img src="img/stars.svg" /></div>
+            <div class="reviews__col">
+              <div class="review">
+                <div class="review__info">
+                  <div class="review__person">
+                    <div class="review__ava"><img src="img/review-2.png" /></div>
+                    <div class="review__cont">
+                      <div class="review__name">Елена</div>
+                      <div class="review__town">г. Челябинск</div>
+                    </div>
+                  </div>
+                  <div class="review__stars"><img src="img/stars.svg" /></div>
+                </div>
+                <p class="review__comment">
+                  Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+                  системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько
+                  очевидна, что консультация с
+                  широким активом играет важную роль в формировании позиций
+                </p>
+              </div>
+            </div>
+            <div class="reviews__col">
+              <div class="review">
+                <div class="review__info">
+                  <div class="review__person">
+                    <div class="review__ava"><img src="img/review-2.png" /></div>
+                    <div class="review__cont">
+                      <div class="review__name">Елена</div>
+                      <div class="review__town">г. Челябинск</div>
+                    </div>
+                  </div>
+                  <div class="review__stars"><img src="img/stars.svg" /></div>
+                </div>
+                <p class="review__comment">
+                  Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+                  системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько
+                  очевидна, что консультация с
+                  широким активом играет важную роль в формировании позиций
+                </p>
+              </div>
+            </div>
+            <div class="reviews__col">
+              <div class="review">
+                <div class="review__info">
+                  <div class="review__person">
+                    <div class="review__ava"><img src="img/review-2.png" /></div>
+                    <div class="review__cont">
+                      <div class="review__name">Елена</div>
+                      <div class="review__town">г. Челябинск</div>
+                    </div>
+                  </div>
+                  <div class="review__stars"><img src="img/stars.svg" /></div>
+                </div>
+                <p class="review__comment">
+                  Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+                  системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько
+                  очевидна, что консультация с
+                  широким активом играет важную роль в формировании позиций
+                </p>
+              </div>
+            </div>
+            <div class="reviews__col">
+              <div class="review">
+                <div class="review__info">
+                  <div class="review__person">
+                    <div class="review__ava"><img src="img/review-2.png" /></div>
+                    <div class="review__cont">
+                      <div class="review__name">Елена</div>
+                      <div class="review__town">г. Челябинск</div>
+                    </div>
+                  </div>
+                  <div class="review__stars"><img src="img/stars.svg" /></div>
+                </div>
+                <p class="review__comment">
+                  Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+                  системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько
+                  очевидна, что консультация с
+                  широким активом играет важную роль в формировании позиций
+                </p>
+              </div>
+            </div>
           </div>
-          <p class="review__comment">
-            Таким образом консультация с широким активом представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько очевидна, что консультация с
-            широким активом играет важную роль в формировании позиций
-          </p>
         </div>
-      </div>
-    </div>    
+      </section>
+      <section class="adviсe">
+        <div class="contain">
+          <div class="h2">Советы по уходу за обувью</div>
+          <img src="img/adviсe-1.jpg" class="adviсe__img floatleft" />
+          <div class="adviсe__title">Регулярность – залог успеха</div>
+          <p>
+            Лучшее, что можно сделать для своей спортивной обуви – заниматься ее чисткой регулярно, каждый раз после
+            использования, а не раз в месяц, когда от пыли и грязи уже не видно первоначальный цвет кроссовок. И
+            помните,
+            что даже незначительно загрязнение со временем может въесться в изделие и привести кроссовки в порядок будет
+            очень даже
+          </p>
+
+          <p>
+            Когда верх кроссовок выполнен не из замши или простой ткани, то обыкновенная немного влажная тряпка
+            прекрасно подойдет для ухода за обувью. Текстильные кроссовки можно обрабатывать простой ворсовой щеткой, а
+            вот упомянутая
+            замша нуждается в более бережном отношении. Для замшевых кроссовок лучше всего купить специальную мягкую
+            щеточку из каучука или нейлона. К счастью, они продаются в практически любом обувном магазине. Такие щеточки
+            не
+            обязательно мочить – они справляются с пылью и незначительной грязью на обуви и сухими.
+          </p>
+          <div class="adviсe__cont">
+            <div class="adviсe__title">Если простой чисткой не обойтись</div>
+            <p>
+              Естественно, после прогулки по проселочной дороге в дождливую погоду или после длительного трейла
+              кроссовки могут быть слишком грязными, чтобы обойтись легкой чисткой. В таком случае лучше всего помыть
+              кроссовки вручную.
+              Для этого понадобится теплый мыльный раствор и губка или тряпка в зависимости от материала кроссовок. На
+              всякий случай напомним, что для текстиля это щетка из войлока, для кожи и кожзама - мягкая губка или
+              тряпка, а для
+              замши каучуковая/нейлоновая щеточка средней жесткости. Шнурки и стельку нужно заблаговременно вытащить и
+              стирать отдельно (кстати, их вполне можно запихнуть и в стиралку)
+            </p>
+
+            <p>
+              <img class="floatright adviсe__img-2" src="img/adviсe-2.jpg" />
+              А как насчет замшевой и кожаной обуви? Такие кроссовки тоже можно стирать в машинке? В общем, да. Но есть
+              ряд нюансов. Во-первых, вы должны быть уверены, что ваша обувь качественная. Хорошая натуральная кожа и
+              замша
+              не боится стиральных машинок, а вот некачественный материал точно разлезется и потрескается. Во-вторых,
+              низкая температура воды и мешок для обуви – обязательные элементы стирки.
+            </p>
+
+            <ul>
+              <li>
+
+                Правильно выберите моющее средство. Как уже говорилось раньше, простой стиральный порошок не подходит
+                для кроссовок. Лучшим решением будет купить специальное средство для стирки обуви или вовсе обойтись без
+                него
+              </li>
+              <li>
+
+                Не забудьте настроить режим! В некоторых стиральных машинках есть программа для стирки обуви – его и
+                выберите. А если в вашей машинке такого нет, то поставьте щадящий режим с температурой воды не выше 40
+                градусов и
+                отключите опцию отжима и сушки
+              </li>
+              <li>
+
+                Не стирайте зашнурованные кроссовки. Чтобы машинка лучше отмыла обувь, необходимо вытянуть из нее шнурки
+                и стельки. Их можно постирать отдельно или кинуть в машинку к кроссовкам
+              </li>
+              <li>
+
+                Предварительно удалите с подошвы кроссовок комки грязи и камушки. Если этого не сделать, можно навредить
+                не только обуви, но и барабану стиральной машины
+              </li>
+            </ul>
+            <a href="" class="advice__btn btn">Отправить заявку</a>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="contain">
+          <div class="h2">Часто задаваемые вопросы</div>
+          <div class="faq__row">
+            <div class="faq__col">
+              <div class="accordion-container">
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    Лизинговые термины
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    В какую из студий приехать для консультации с мастером?
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    Сроки Выполнения работы?
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    Можно ли изменить цвет обуви кардинально?
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__col">
+              <div class="accordion-container">
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    А сколько будет стоить …?
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    Возможен ли выезд мастера на дом?
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    Как мне узнать, что мой заказ готов?
+                  </div>
+                  <div class="accordion-content">
+                    Все студии Гуталин равносильны. Квалификация мастеров одинаково высокая, приезжайте куда Вам
+                    удобнее. Могут отличаться лишь сроки выполнения из-за разной загрузки
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="menu-gal">
+        <div class="contain">
+          <div class="menu-gal__row">
+            <a href="" class="menu-gal__item">
+              <img src="img/menu-gal-1.jpg" class="menu-gal__img" />
+              <span class="menu-gal__name">Галерея</span>
+            </a>
+            <a href="" class="menu-gal__item">
+              <img src="img/menu-gal-2.jpg" class="menu-gal__img" />
+              <span class="menu-gal__name">Контакты</span>
+            </a>
+            <a href="" class="menu-gal__item">
+              <img src="img/menu-gal-3.jpg" class="menu-gal__img" />
+              <span class="menu-gal__name">Франшиза</span>
+            </a>
+            <a href="" class="menu-gal__item">
+              <img src="img/menu-gal-4.jpg" class="menu-gal__img" />
+              <span class="menu-gal__name">Магазин</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="conts">
+        <div class="contain">
+          <div class="conts__row">
+            <div class="conts__left">
+              <div class="conts__h2 h2 _white">Наши контакты</div>
+              <div class="conts__w">
+                <div class="conts__col">
+                  <div class="conts__adress">Энгельса, 52</div><a href="tel:777-06-37" class="conts__phone">777-06-37</a><a href="" class="conts__show">Показать на карте</a>
+                </div>
+                <div class="conts__col">
+                  <div class="conts__adress">Чичерина, 43</div><a href="tel:777-86-17" class="conts__phone">777-86-17</a>
+                  <a href="" class="conts__show">Показать на карте</a>
+                </div>
+                <div class="conts__col">
+                  <div class="conts__adress">Пушкина, 62</div><a href="tel:220-72-77" class="conts__phone">220-72-77</a>
+                  <a href="" class="conts__show">Показать на карте</a>
+                </div>
+              </div>
+              <div class="conts__ab-posts">
+                <div class="conts__ab-posts-title">О постаматах:</div>
+                <p class="conts__ab-posts-info">Значимость этих проблем настолько очевидна, что реализация намеченных
+                  плановых заданий способствует подготовки<br>
+                  и реализации системы обучения кадров, соответствует насущным потребностям. Идейные соображения порядка, а
+                также консультация </p>
+              </div>
+              <a href="" class="conts__btn btn">Подробнее</a>
+            </div>
+            <div class="conts__right">
+              <img src="img/conts-post.png" class="conts__post-img">
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    @@include('var/_footer.html')
   </div>
-</section>
+  <!--wrapper-->
 
-
-</main>
-<footer class="footer">
-
-</footer>
-</div><!--wrapper-->
-
-@@include('var/_scripts.html')
+  <script src="js/jquery-3.4.1.min.js"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=<e28ccc70-b9f5-4f7b-aec4-03bab1133076>" type="text/javascript"></script>
+  <script async src="js/placemark.js"></script>   -->
+  <script src="js/nouislider.js"></script>
+  <script src="js/wNumb.min.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/common.js"></script>
 </body>
-</html>
 
+</html>
